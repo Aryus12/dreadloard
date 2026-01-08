@@ -25,6 +25,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    
+
     // 3. Intersection Observer for fade-in animations
     const observerOptions = {
         threshold: 0.15,
@@ -107,6 +109,25 @@ document.addEventListener('DOMContentLoaded', () => {
             header.style.background = 'rgba(5, 5, 5, 0.8)';
         }
     });
+
+    // 7. Menu Toggle
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    
+    if (menuToggle && navLinks) {
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        // Close menu when a link is clicked
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                menuToggle.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+    }
 
     // Console signature
     console.log(

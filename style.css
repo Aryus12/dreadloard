@@ -143,11 +143,12 @@ header {
     border-bottom: 1px solid var(--border-color);
 }
 
-nav {
+.navbar {
     height: 90px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 
 .logo {
@@ -188,6 +189,62 @@ nav {
 .btn-contact:hover {
     background: var(--accent-primary);
     color: white !important;
+}
+/* Toggle button */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background: #fff;
+    transition: 0.4s;
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 80px;
+        right: 0;
+        background: #0f172a;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        padding: 30px 0;
+        transform: translateY(-120%);
+        transition: transform 0.4s ease;
+        z-index: 100;
+    }
+
+    .nav-links.active {
+        transform: translateY(0);
+    }
+
+    .philosophy-grid, .contact-wrapper {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Animation burger → X */
+.menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
 }
 
 /* Hero Section */
@@ -493,14 +550,4 @@ footer {
     font-family: var(--font-mono);
     font-size: 0.7rem;
     color: var(--text-muted);
-}
-
-/* Responsive */
-@media (max-width: 992px) {
-    .philosophy-grid, .contact-wrapper {
-        grid-template-columns: 1fr;
-    }
-    .nav-links {
-        display: none;
-    }
 }
