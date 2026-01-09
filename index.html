@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="" href="dread.jpeg">
+
 
    
     <title>DREADLORD – Architecte Full-Stack Senior | Web, Cloud & Sécurité</title>
@@ -23,13 +25,13 @@
     <meta name="robots" content="index, accueil ,  dashboard , follow, max-image-preview:large">
 
    
-    <link rel="canonical" href="https://www.dreadlord.dev/">
+    <link rel="canonical" href="https://dreadlord.onrender.com">
 
    
     <meta property="og:type" content="website">
     <meta property="og:title" content="DREADLORD – Architecte Full-Stack Senior">
     <meta property="og:description" content="Solutions web modernes, performantes et sécurisées. Expertise Full-Stack, Cloud & DevOps.">
-    <meta property="og:url" content="https://www.dreadlord.dev/">
+    <meta property="og:url" content="https://dreadlord.onrender.com">
     <meta property="og:image" content="https://www.dreadlord.dev/assets/og-image.jpg">
     <meta property="og:site_name" content="DREADLORD">
 
@@ -37,7 +39,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="DREADLORD – Architecte Full-Stack Senior">
     <meta name="twitter:description" content="Architecte Full-Stack spécialisé en Web, Cloud, Sécurité et APIs performantes.">
-    <meta name="twitter:image" content="https://www.dreadlord.dev/assets/og-image.jpg">
+    <meta name="twitter:image" content="https://dreadlord.onrender.com/assets/og-image.jpg">
 
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -49,7 +51,7 @@
     <link rel="stylesheet" href="style.css">
 
    
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+   
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <meta name="theme-color" content="#0f172a">
 </head>
@@ -63,7 +65,7 @@
     </div>
 
     <header>
-    <div class="container">
+   <div class="container">
     <nav class="navbar">
         <div class="logo">DREADLORD<span class="dot">.</span></div>
 
@@ -79,7 +81,19 @@
             <span></span>
             <span></span>
             <span></span>
+
+             <div class="nav-links">
+            <a href="#architecte">Philosophie</a>
+            <a href="#arsenal">Arsenal</a>
+            <a href="#operations">Opérations</a>
+            <a href="#plans">Architecture</a>
+            <a href="#contact" class="btn-contact">Invocation</a>
         </div>
+        </div>
+
+       
+    </nav>
+</div>
 
        
     </nav>
@@ -109,7 +123,7 @@
         </section>
 
         <!-- 2. Philosophie -->
-        <section id="architecte" class="section-padding">
+        <section id="architecte" class="section-padding" width="70%" height="auto">
             <div class="container">
                 <div class="section-header">
                     <span class="section-number">01</span>
@@ -140,7 +154,7 @@
         </section>
 
         <!-- 3. Arsenal (Compétences) -->
-        <section id="arsenal" class="section-padding bg-alt">
+        <section id="arsenal" class="section-padding bg-alt"  >
             <div class="container">
                 <div class="section-header">
                     <span class="section-number">02</span>
@@ -182,14 +196,14 @@
         </section>
 
         <!-- 4. Opérations (Projets) -->
-        <section id="operations" class="section-padding">
+        <section id="operations" class="section-padding" >
             <div class="container">
                 <div class="section-header">
                     <span class="section-number">03</span>
                     <h2 class="section-title">Opérations Classifiées</h2>
                 </div>
                 <div class="projects-grid">
-                    <article class="project-card">
+                    <article class="project-card"  width="70%" height="auto">
                         <div class="project-content">
                             <span class="project-type">Fintech / Security</span>
                             <h3>Projet : StayMaster</h3>
@@ -203,7 +217,7 @@
                             <a href="#" class="project-link">Dossier Technique →</a>
                         </div>
                     </article>
-                    <article class="project-card">
+                    <article class="project-card"  width="70%" height="auto">
                         <div class="project-content">
                             <span class="project-type">Cloud Infrastructure</span>
                             <h3>Projet : BusLink</h3>
@@ -214,7 +228,7 @@
                             <a href="#" class="project-link">Dossier Technique →</a>
                         </div>
                     </article>
-                    <article class="project-card">
+                    <article class="project-card"  width="70%" height="auto">
                         <div class="project-content">
                             <span class="project-type">Real-time Web</span>
                             <h3>Projet : AFRIHOME</h3>
@@ -280,7 +294,11 @@ services:
                         </div>
 
                     </div>
-                    <form id="contact-form" class="contact-form"    action="https://formspree.io/f/mjkpgyjn" method="POST">
+                   
+                </div>
+            </div>
+        </section>
+         <form id="contact-form" class="contact-form"  action="https://formspree.io/f/mzdznkqw" method="POST">
                         <div class="form-group">
                             <label>IDENTITÉ</label>
                             <input type="text" name="name" required placeholder="Votre nom ou entité">
@@ -295,9 +313,6 @@ services:
                         </div>
                         <button type="submit" class="btn-submit">Initialiser la Transmission</button>
                     </form>
-                </div>
-            </div>
-        </section>
     </main>
 
     <footer>
@@ -315,6 +330,20 @@ services:
             </div>
         </div>
     </footer>
+
+    <script>
+document.addEventListener("DOMContentLoaded", () => {
+    const toggle = document.querySelector(".menu-toggle");
+    const navLinks = document.querySelector(".nav-links");
+
+    toggle.addEventListener("click", () => {
+        toggle.classList.toggle("active");
+        navLinks.classList.toggle("active");
+    });
+});
+</script>
+
+
 
     <script src="main.js"></script>
 </body>
